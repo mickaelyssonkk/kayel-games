@@ -1,0 +1,56 @@
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#12090d;color:#f5f5f5}
+header{background:#1a0d12;border-bottom:1px solid #4d1826;position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+.nav{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{color:#fff;text-decoration:none;font-size:22px;font-weight:bold;transition:.2s}
+.logo:hover{color:#d83b5c;transform:scale(1.03)}
+.menu{display:flex;gap:8px;flex-wrap:wrap}
+.menu button{border:0;background:transparent;color:#c9aeb5;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:15px;transition:.2s}
+.menu button:hover,.menu button.ativo{background:#5c1b2c;color:#fff;transform:translateY(-2px)}
+main{max-width:1100px;min-height:calc(100vh - 130px);margin:0 auto;padding:40px 20px}
+main>*{animation:aparecer .35s ease}
+@keyframes aparecer{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:linear-gradient(135deg,#451321,#1c0d13);border:1px solid #662037;border-radius:18px;padding:40px;margin-bottom:35px;box-shadow:0 15px 40px rgba(0,0,0,.25)}
+.hero h1{margin-top:0;font-size:42px;max-width:650px}
+.hero p{color:#d1b9c0;line-height:1.7;max-width:650px}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.botao{border:1px solid #9b2c48;background:#a62d4a;color:#fff;padding:11px 17px;border-radius:8px;cursor:pointer;font-weight:bold;transition:.2s}
+.botao:hover{background:#c23858;transform:translateY(-2px);box-shadow:0 6px 18px rgba(166,45,74,.25)}
+.botao.secundario{background:transparent;color:#fff}
+.secao-titulo{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}
+.secao-titulo h1,.secao-titulo h2{margin:0}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+input,select{background:#1c0f14;color:#fff;border:1px solid #51202e;border-radius:8px;padding:12px;font-size:15px;outline:none;transition:.2s}
+input:focus,select:focus{border-color:#a62d4a;box-shadow:0 0 0 3px rgba(166,45,74,.15)}
+input{flex:1;min-width:220px}select{min-width:180px}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#1a0e13;border:1px solid #401622;border-radius:14px;overflow:hidden;transition:.25s;animation:cardEntrada .35s ease}
+@keyframes cardEntrada{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.card:hover{transform:translateY(-6px);border-color:#8e2944;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.capa{height:210px;display:flex;align-items:center;justify-content:center;font-size:55px;background:linear-gradient(135deg,#3c1421,#211018);overflow:hidden}
+.capa img{width:100%;height:100%;object-fit:cover}
+.card-conteudo{padding:17px}
+.card h3{margin:0 0 8px}
+.card p{color:#bcaab0;font-size:14px;line-height:1.5}
+.tag{display:inline-block;background:#401523;color:#e7c4cd;padding:5px 8px;border-radius:6px;font-size:12px;margin:3px 3px 3px 0}
+.card-acoes{display:flex;gap:8px;margin-top:15px}
+.card-acoes button{flex:1;padding:9px;border-radius:7px;cursor:pointer;border:1px solid #572033;background:transparent;color:#fff;transition:.2s}
+.card-acoes button:hover{background:#4d1929}
+.card-acoes .favorito{max-width:50px}
+form{max-width:600px;background:#1a0e13;border:1px solid #401622;border-radius:14px;padding:25px;animation:aparecer .35s ease}
+.campo{margin-bottom:17px}
+label{display:block;font-weight:bold;margin-bottom:7px;color:#e6d0d5}
+.campo input,.campo select{width:100%}
+.preview{width:100%;height:220px;border:1px dashed #683044;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#12090d;margin-top:8px;color:#9f8a91}
+.preview img{width:100%;height:100%;object-fit:cover}
+.mensagem{margin-top:15px;padding:12px;background:#321522;border:1px solid #74304a;border-radius:8px;color:#e9cbd3}
+.detalhes{background:#1a0e13;border:1px solid #401622;border-radius:15px;padding:30px}
+.detalhes .capa{height:280px;border-radius:10px;margin-bottom:25px}
+.detalhes p{color:#c7b4ba;line-height:1.7}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}
+.info div{background:#28131b;padding:14px;border-radius:8px}
+.vazio{border:1px dashed #683044;border-radius:12px;padding:35px;text-align:center;color:#a9959b}
+footer{text-align:center;color:#79666c;padding:25px;border-top:1px solid #32151f}
+@media(max-width:800px){.nav{flex-direction:column;align-items:stretch}.menu{justify-content:center}.grade{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:32px}}
+@media(max-width:550px){main{padding:25px 15px}.hero{padding:25px}.grade{grid-template-columns:1fr}.info{grid-template-columns:1fr}}
